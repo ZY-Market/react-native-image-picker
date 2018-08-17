@@ -1,11 +1,11 @@
 
-# React Native Image Picker [![npm version](https://badge.fury.io/js/react-native-image-picker.svg)](https://badge.fury.io/js/react-native-image-picker) [![npm](https://img.shields.io/npm/dt/react-native-image-picker.svg)](https://npmcharts.com/compare/react-native-image-picker?minimal=true) ![MIT](https://img.shields.io/dub/l/vibe-d.svg) ![Platform - Android and iOS](https://img.shields.io/badge/platform-Android%20%7C%20iOS-yellow.svg) [![Gitter chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/react-native-image-picker/Lobby)
+# React Native Image Picker [![npm version](https://badge.fury.io/js/zy-react-native-image-picker.svg)](https://badge.fury.io/js/react-native-image-picker) [![npm](https://img.shields.io/npm/dt/zy-react-native-image-picker.svg)](https://npmcharts.com/compare/react-native-image-picker?minimal=true) ![MIT](https://img.shields.io/dub/l/vibe-d.svg) ![Platform - Android and iOS](https://img.shields.io/badge/platform-Android%20%7C%20iOS-yellow.svg) [![Gitter chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/react-native-image-picker/Lobby)
 
 A React Native module that allows you to use native UI to select a photo/video from the device library or directly from the camera, like so:
 
 iOS | Android
 ------- | ----
-<img title="iOS" src="https://github.com/marcshilling/react-native-image-picker/blob/master/images/ios-image.png"> | <img title="Android" src="https://github.com/marcshilling/react-native-image-picker/blob/master/images/android-image.png">
+<img title="iOS" src="https://github.com/ZY-Market/react-native-image-picker/blob/master/images/ios-image.png"> | <img title="Android" src="https://github.com/ZY-Market/react-native-image-picker/blob/master/images/android-image.png">
 
 #### _Before you open an issue_
 This library started as a basic bridge of the native iOS image picker, and I want to keep it that way. As such, functionality beyond what the native `UIImagePickerController` supports will not be supported here. **Multiple image selection, more control over the crop tool, and landscape support** are things missing from the native iOS functionality - **not issues with my library**. If you need these things, [react-native-image-crop-picker](https://github.com/ivpusic/react-native-image-crop-picker) might be a better choice for you.
@@ -21,7 +21,7 @@ This library started as a basic bridge of the native iOS image picker, and I wan
 
 ### NOTE: THIS PACKAGE IS NOW BUILT FOR REACT NATIVE 0.40 OR GREATER! IF YOU NEED TO SUPPORT REACT NATIVE < 0.40, YOU SHOULD INSTALL THIS PACKAGE `@0.24`
 
-`npm install react-native-image-picker@latest --save`
+`npm install zy-react-native-image-picker@latest --save`
 
 ### Automatic Installation
 
@@ -34,7 +34,7 @@ IMPORTANT NOTE: You'll still need to perform step 4 for iOS and steps 2 and 5 fo
 #### iOS
 
 1. In the XCode's "Project navigator", right click on your project's Libraries folder ➜ `Add Files to <...>`
-2. Go to `node_modules` ➜ `react-native-image-picker` ➜ `ios` ➜ select `RNImagePicker.xcodeproj`
+2. Go to `node_modules` ➜ `zy-react-native-image-picker` ➜ `ios` ➜ select `RNImagePicker.xcodeproj`
 3. Add `RNImagePicker.a` to `Build Phases -> Link Binary With Libraries`
 4. For iOS 10+, Add the `NSPhotoLibraryUsageDescription`, `NSCameraUsageDescription`, `NSPhotoLibraryAddUsageDescription` and `NSMicrophoneUsageDescription` (if allowing video) keys to your `Info.plist` with strings describing why your app needs these permissions. **Note: You will get a SIGABRT crash if you don't complete this step**
 
@@ -58,8 +58,8 @@ IMPORTANT NOTE: You'll still need to perform step 4 for iOS and steps 2 and 5 fo
 #### Android
 1. Add the following lines to `android/settings.gradle`:
     ```gradle
-    include ':react-native-image-picker'
-    project(':react-native-image-picker').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-image-picker/android')
+    include ':zy-react-native-image-picker'
+    project(':zy-react-native-image-picker').projectDir = new File(rootProject.projectDir, '../node_modules/zy-react-native-image-picker/android')
     ```
 
 2. Update the android build tools version to `2.2.+` in `android/build.gradle`:
@@ -83,7 +83,7 @@ IMPORTANT NOTE: You'll still need to perform step 4 for iOS and steps 2 and 5 fo
 4. Add the compile line to the dependencies in `android/app/build.gradle`:
     ```gradle
     dependencies {
-        compile project(':react-native-image-picker')
+        compile project(':zy-react-native-image-picker')
     }
     ```
 
@@ -165,7 +165,7 @@ This code allows to pass result of request permissions to native part.
 ## Usage
 
 ```javascript
-var ImagePicker = require('react-native-image-picker');
+var ImagePicker = require('zy-react-native-image-picker');
 
 // More info on all the options is below in the README...just some common use cases shown here
 var options = {
