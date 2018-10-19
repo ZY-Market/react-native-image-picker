@@ -87,7 +87,7 @@ public class ImageConfig
                 
         return new ImageConfig(
                 original, this.resized, this.maxWidth,
-                this.maxHeight, this.quality, this.rotation,
+                this.maxHeight, quality, this.rotation,
                 this.saveToCameraRoll
         );
     }
